@@ -1,0 +1,52 @@
+<project name="macosx" default="jar">
+    
+    <!-- properties -->
+    <property name="src" location="src/"/>
+    <property name="native_src" location="native_src/"/>
+    <property name="bin" location="bin/"/>
+    <property name="doc" location="doc/"/>
+    <property name="jarfile" location="./macosx.jar"/>
+    <target name="all" depends="jar, doc"/>
+
+
+    <!-- targets -->
+	<target name="dependencies">
+		<depend srcdir="${src}" destdir="${bin}" closure="yes" classpath = "../core/core.jar" />
+	</target>
+	
+    <target name="compile" depends="dependencies">
+        <ant antfile="build.xml" dir="../core" target="jar" inheritAll="false"/>
+        <mkdir dir="${bin}"/>
+        <javac classpath="../core/core.jar" sourcepath="" srcdir="${src}" destdir="${bin}" failonerror="true" verbose="no" listfiles="no"
+        	includeantruntime="false" debug="on" debuglevel="lines,vars,source"/>
+    </target>
+
+    <target name="compileNative" depends="compile">
+        <exec dir="${native_src}" executable="./compile.sh" failonerror="true">
+        </exec>
+    </target>
+
+    <target name="jar" depends="compileNative">
+        <jar basedir="${bin}" destfile="${jarfile}"/>
+    </target>
+
+    <target name="doc">
+        <javadoc destdir= "${doc}"
+                 access="public"
+                 windowtitle="MacOSX"
+                 >
+
+            <fileset dir="src" defaultexcludes="yes">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+
+    <target name="clean">
+        <delete dir="${bin}"/>
+        <delete dir="${doc}"/>
+        <delete file="${jarfile}"/>
+        <exec executable="./clean.sh" dir="${native_src}" failonerror="true" searchpath="true">
+        </exec>
+    </target>
+</project>
