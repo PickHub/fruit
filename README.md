@@ -5,6 +5,11 @@ the Operating System's Accessibility API to gather the state of an application a
 actions from this state. This allows to test an application fully automatic (no scripting). The general idea is to find critical
 faults such as crashes and freezes and save them for later inspection.
 
-Videos and Screenshots of FRUIT can be found at https://staq.dsic.upv.es/sbauersfeld/index.html
+This is a video of fruit in action:
+[![ScreenShot](gtr.png)](http://youtu.be/Ttr5bKNJdKo?t=12s&hd=1)
+
+
+
+More videos and screenshots of FRUIT can be found at https://staq.dsic.upv.es/sbauersfeld/index.html
 
 contact: Sebastian Bauersfeld (sebastianbauersfeld AT gmx DOT de)
