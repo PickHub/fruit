@@ -6,15 +6,18 @@ actions from this state. This allows to test an application fully automatic (no 
 faults such as crashes and freezes and save them for later inspection.
 
 This is a video of fruit in action:
+
 [![ScreenShot](video.png)](http://www.youtube.com/watch?v=ggAFpvSA7OE)
 
+
 Fruit allows complex action specifications in Prolog:
+
 [![ScreenShot](video.png)](http://www.youtube.com/watch?v=Omm-k-qyIyw)
 [![ScreenShot](video.png)](http://www.youtube.com/watch?v=tb0Wj3iRqj8)
 
 
-
 Excel crashing:
+
 [![ScreenShot](excel_crash.png)](https://www.youtube.com/watch?v=7QSCteg-M8U)
 
 
