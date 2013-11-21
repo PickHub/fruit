@@ -6,7 +6,7 @@ actions from this state. This allows to test an application fully automatic (no 
 faults such as crashes and freezes and save them for later inspection.
 
 This is a video of fruit in action:
-[![ScreenShot](gtr.png)](http://youtu.be/Ttr5bKNJdKo?t=12s&hd=1)
+[![ScreenShot](excel_crash.png)](https://www.youtube.com/watch?v=7QSCteg-M8U)
 
 
 
